@@ -1,0 +1,1 @@
+Poster image placeholder. Replace with final image for GitHub or LinkedIn.
