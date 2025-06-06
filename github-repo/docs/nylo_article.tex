@@ -1,5 +1,108 @@
-% LaTeX article placeholder
-\documentclass{article}
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=1in}
+\title{Nylo: A Beginner-Friendly Yet Powerful Programming Language}
+\author{DASARI SURYA SAI SRI RAM}
+\date{\today}
+
+\definecolor{codegray}{rgb}{0.4,0.4,0.4}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{nylo}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
 \begin{document}
-Nylo Article
+
+\maketitle
+
+\section*{Introduction}
+Nylo is a modern interpreted programming language that combines the simplicity of Python, the safety and performance of Rust, the UI capabilities of React, and the command-line integration of Bash.
+
+Designed for beginners but powerful enough for developers, Nylo uses a minimalist syntax and high-level abstractions to make programming intuitive, productive, and expressive.
+
+\section*{Core Design Principles}
+\begin{itemize}
+  \item \textbf{Minimal Syntax:} Simple, readable, natural language–inspired keywords.
+  \item \textbf{High-Level Abstractions:} Avoids low-level memory management.
+  \item \textbf{Built-in UI Components:} Supports declarative UI design like React.
+  \item \textbf{Shell Integration:} Use shell commands with one line.
+  \item \textbf{Cross-Platform and Interpreted:} Runs on Windows, Linux, and macOS.
+\end{itemize}
+
+\section*{Basic Syntax}
+Here is a simple Nylo program to print a message and use a variable:
+
+\begin{lstlisting}[style=nylo, caption=Hello World in Nylo]
+name is "Nylo"
+show "Hello from " + name
+\end{lstlisting}
+
+\section*{Taking Input}
+Nylo allows easy user input using the \texttt{input} keyword:
+
+\begin{lstlisting}[style=nylo, caption=User Input Example]
+show "What is your name?"
+name is input
+show "Hello, " + name + "!"
+\end{lstlisting}
+
+\section*{Loops and Lists}
+You can easily loop through a list:
+
+\begin{lstlisting}[style=nylo, caption=List and Loop]
+items is ["apple", "banana", "cherry"]
+for each item in items
+  show item.upper()
+\end{lstlisting}
+
+\section*{Functions and Buttons}
+Nylo supports defining functions and UI components like buttons:
+
+\begin{lstlisting}[style=nylo, caption=Function and Button Example]
+to greet do
+  show "Welcome!"
+
+button "Click me" on click do
+  greet
+  message is do "echo Hello from shell!"
+  show message
+\end{lstlisting}
+
+\section*{Arithmetic Operations}
+Nylo can also handle basic math operations:
+
+\begin{lstlisting}[style=nylo, caption=Arithmetic in Nylo]
+show "Enter two numbers:"
+a is input
+b is input
+
+a is float(a)
+b is float(b)
+
+sum is a + b
+show "Sum: " + str(sum)
+\end{lstlisting}
+
+\section*{Conclusion}
+Nylo is ideal for beginners learning to code and for developers who want a fast, flexible, and scriptable language with powerful features. With its readable syntax, built-in UI and shell capabilities, and memory-safe execution, Nylo is a modern tool for the next generation of programmers.
+
 \end{document}
